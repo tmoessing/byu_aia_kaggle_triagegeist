@@ -1,4 +1,4 @@
-# BYU AIA Kaggle — TriageGeist
+# BYU AIA Kaggle — Triageeist
 
 **Question:** Can AI meaningfully support triage decisions in the emergency department?
 
@@ -80,17 +80,7 @@ These three columns are added automatically by `build_clean_data.py`.
 
 ## main.py
 
-Trains a baseline Decision Tree classifier on `data/clean_train.csv`.
-
-**Steps:**
-1. Drops non-predictive columns: `patient_id`, `site_id`, `triage_nurse_id`
-2. Drops target leakage columns: `disposition`, `ed_los_hours` (outcomes recorded after triage)
-3. Label-encodes all categorical columns
-4. Splits 80/20 train/validation
-5. Fits a `DecisionTreeClassifier` (max depth 10)
-6. Prints accuracy, classification report, and top 20 feature importances
-
-This is a baseline — the intent is to establish a score before moving to stronger models (LightGBM, XGBoost).
+Our Model
 
 ---
 
@@ -98,7 +88,7 @@ This is a baseline — the intent is to establish a score before moving to stron
 
 ### Baseline
 
-- [ ] Run main.py
+- [ ] Create a Decision Tree and determine feature importance *(Owner: Carson)*
 - [ ] Check class imbalance
 - [ ] Confirm no leakage
 

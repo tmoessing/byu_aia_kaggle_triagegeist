@@ -1,0 +1,64 @@
+|--- news2_score <= 6.50
+|   |--- news2_score <= 1.50
+|   |   |--- pain_score <= 4.50
+|   |   |   |--- spo2 <= 97.45
+|   |   |   |   |--- num_prior_ed_visits_12m <= 1.50
+|   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |--- num_prior_ed_visits_12m >  1.50
+|   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |--- spo2 >  97.45
+|   |   |   |   |--- num_prior_ed_visits_12m <= 0.50
+|   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |--- num_prior_ed_visits_12m >  0.50
+|   |   |   |   |   |--- truncated branch of depth 6
+|   |   |--- pain_score >  4.50
+|   |   |   |--- pain_score <= 7.50
+|   |   |   |   |--- num_prior_ed_visits_12m <= 1.50
+|   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |--- num_prior_ed_visits_12m >  1.50
+|   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |--- pain_score >  7.50
+|   |   |   |   |--- pain_score <= 9.50
+|   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |--- pain_score >  9.50
+|   |   |   |   |   |--- class: 2
+|   |--- news2_score >  1.50
+|   |   |--- gcs_total <= 14.50
+|   |   |   |--- gcs_total <= 8.00
+|   |   |   |   |--- class: 1
+|   |   |   |--- gcs_total >  8.00
+|   |   |   |   |--- triage_nurse_id_NURSE-0039 <= 0.50
+|   |   |   |   |   |--- class: 2
+|   |   |   |   |--- triage_nurse_id_NURSE-0039 >  0.50
+|   |   |   |   |   |--- class: 2
+|   |   |--- gcs_total >  14.50
+|   |   |   |--- news2_score <= 2.50
+|   |   |   |   |--- systolic_bp <= 100.05
+|   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |--- systolic_bp >  100.05
+|   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |--- news2_score >  2.50
+|   |   |   |   |--- pain_score <= 9.50
+|   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |--- pain_score >  9.50
+|   |   |   |   |   |--- class: 2
+|--- news2_score >  6.50
+|   |--- gcs_total <= 8.50
+|   |   |--- class: 1
+|   |--- gcs_total >  8.50
+|   |   |--- pain_score <= 4.50
+|   |   |   |--- triage_nurse_id_NURSE-0044 <= 0.50
+|   |   |   |   |--- class: 3
+|   |   |   |--- triage_nurse_id_NURSE-0044 >  0.50
+|   |   |   |   |--- class: 3
+|   |   |--- pain_score >  4.50
+|   |   |   |--- gcs_total <= 10.50
+|   |   |   |   |--- news2_score <= 13.50
+|   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |--- news2_score >  13.50
+|   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |--- gcs_total >  10.50
+|   |   |   |   |--- gcs_total <= 14.50
+|   |   |   |   |   |--- class: 2
+|   |   |   |   |--- gcs_total >  14.50
+|   |   |   |   |   |--- truncated branch of depth 6

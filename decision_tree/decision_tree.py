@@ -39,7 +39,7 @@ CATEGORICAL_COLS = []
 for col in train.columns:
     if col in DROP_COLS or col == TARGET:
         continue
-    if train[col].dtype == "object":
+    if not pd.api.types.is_numeric_dtype(train[col]):
         CATEGORICAL_COLS.append(col)
 
 NUMERIC_COLS = []

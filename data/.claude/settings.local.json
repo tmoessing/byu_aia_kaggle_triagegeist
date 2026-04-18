@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python experiments/nhamcs_pure/train_nhamcs.py)",
+      "Bash(python -c \"import lightgbm; print\\(lightgbm.__version__\\)\")",
+      "Bash(python -c ' *)",
+      "Bash(python experiments/nhamcs_pure/exp_ablation_missing_flags.py)",
+      "Bash(python experiments/nhamcs_ood/align_nhamcs.py)"
+    ]
+  }
+}

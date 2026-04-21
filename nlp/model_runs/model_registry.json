@@ -1,5 +1,5 @@
 {
-  "latest_run": "run_05",
+  "latest_run": "run_07",
   "runs": [
     {
       "run_id": "run_01",
@@ -3426,6 +3426,791 @@
           "validation_weighted_f1": 0.888552604882269
         }
       ]
+    },
+    {
+      "run_id": "run_06",
+      "created_at_utc": "2026-04-20T22:22:28.849225+00:00",
+      "uses_structured_features": true,
+      "split_config": {
+        "train_fraction": 0.64,
+        "validation_fraction": 0.16,
+        "test_fraction": 0.2,
+        "test_metrics_revealed": false,
+        "counts": {
+          "train": 51200,
+          "val": 12800,
+          "test": 16000,
+          "total": 80000
+        }
+      },
+      "models": [
+        {
+          "pipeline": "pipeline_a",
+          "model_name": "random_forest",
+          "artifact_path": "model_runs/run_06/pipeline_a_random_forest.pkl",
+          "validation_accuracy": 0.877890625,
+          "validation_weighted_precision": 0.8780272814400019,
+          "validation_weighted_recall": 0.877890625,
+          "validation_weighted_f1": 0.8773470938134781,
+          "test_weighted_f1": null,
+          "top_feature_weights": [
+            {
+              "feature": "news2_score",
+              "weight": 0.1154608858284618
+            },
+            {
+              "feature": "gcs_total",
+              "weight": 0.06929837566554949
+            },
+            {
+              "feature": "pain_score",
+              "weight": 0.06672181644710103
+            },
+            {
+              "feature": "spo2",
+              "weight": 0.05789710038944053
+            },
+            {
+              "feature": "respiratory_rate",
+              "weight": 0.05109614528457922
+            },
+            {
+              "feature": "temperature_c",
+              "weight": 0.05034840986502772
+            },
+            {
+              "feature": "shock_index",
+              "weight": 0.03856356491363844
+            },
+            {
+              "feature": "mean_arterial_pressure",
+              "weight": 0.0347276405260654
+            },
+            {
+              "feature": "heart_rate",
+              "weight": 0.030022628063424022
+            },
+            {
+              "feature": "num_prior_ed_visits_12m",
+              "weight": 0.028641279490993696
+            },
+            {
+              "feature": "nlp_full_mild",
+              "weight": 0.023390649187174595
+            },
+            {
+              "feature": "systolic_bp",
+              "weight": 0.022837267081424622
+            },
+            {
+              "feature": "mental_status_triage_alert",
+              "weight": 0.02159627204929613
+            },
+            {
+              "feature": "diastolic_bp",
+              "weight": 0.020881920863090778
+            },
+            {
+              "feature": "pulse_pressure",
+              "weight": 0.012924089459461137
+            },
+            {
+              "feature": "nlp_full_advice",
+              "weight": 0.011191914559000033
+            },
+            {
+              "feature": "height_cm",
+              "weight": 0.009724430764360473
+            },
+            {
+              "feature": "weight_kg",
+              "weight": 0.00967746040387434
+            },
+            {
+              "feature": "bmi",
+              "weight": 0.009276780690086098
+            },
+            {
+              "feature": "nlp_full_moderate",
+              "weight": 0.008737795112672732
+            }
+          ]
+        },
+        {
+          "pipeline": "pipeline_a",
+          "model_name": "xgboost",
+          "artifact_path": "model_runs/run_06/pipeline_a_xgboost.pkl",
+          "validation_accuracy": 0.89859375,
+          "validation_weighted_precision": 0.8987927911516921,
+          "validation_weighted_recall": 0.89859375,
+          "validation_weighted_f1": 0.8986684312258998,
+          "test_weighted_f1": null,
+          "top_feature_weights": [
+            {
+              "feature": "news2_score",
+              "weight": 0.16297651827335358
+            },
+            {
+              "feature": "gcs_total",
+              "weight": 0.11357796937227249
+            },
+            {
+              "feature": "pain_score",
+              "weight": 0.05814037099480629
+            },
+            {
+              "feature": "nlp_full_mild",
+              "weight": 0.035895250737667084
+            },
+            {
+              "feature": "spo2",
+              "weight": 0.029528187587857246
+            },
+            {
+              "feature": "nlp_full_systemic",
+              "weight": 0.02793755754828453
+            },
+            {
+              "feature": "nlp_full_new",
+              "weight": 0.02771075628697872
+            },
+            {
+              "feature": "nlp_full_advice",
+              "weight": 0.023332471027970314
+            },
+            {
+              "feature": "temperature_c",
+              "weight": 0.01830054260790348
+            },
+            {
+              "feature": "respiratory_rate_missing",
+              "weight": 0.018098700791597366
+            },
+            {
+              "feature": "nlp_full_moderate",
+              "weight": 0.017611131072044373
+            },
+            {
+              "feature": "mental_status_triage_alert",
+              "weight": 0.017237789928913116
+            },
+            {
+              "feature": "num_prior_ed_visits_12m",
+              "weight": 0.01721813529729843
+            },
+            {
+              "feature": "nlp_full_features",
+              "weight": 0.016054561361670494
+            },
+            {
+              "feature": "nlp_full_chest",
+              "weight": 0.01592395082116127
+            },
+            {
+              "feature": "nlp_full_minor",
+              "weight": 0.01407655980437994
+            },
+            {
+              "feature": "nlp_full_query",
+              "weight": 0.01399623230099678
+            },
+            {
+              "feature": "nlp_full_pain",
+              "weight": 0.012843853794038296
+            },
+            {
+              "feature": "mental_status_triage_unresponsive",
+              "weight": 0.012822305783629417
+            },
+            {
+              "feature": "nlp_full_acute",
+              "weight": 0.012724293395876884
+            }
+          ]
+        },
+        {
+          "pipeline": "pipeline_b",
+          "model_name": "random_forest",
+          "artifact_path": "model_runs/run_06/pipeline_b_random_forest.pkl",
+          "validation_accuracy": 0.869296875,
+          "validation_weighted_precision": 0.8698078621138936,
+          "validation_weighted_recall": 0.869296875,
+          "validation_weighted_f1": 0.8689451754991291,
+          "test_weighted_f1": null,
+          "top_feature_weights": [
+            {
+              "feature": "news2_score",
+              "weight": 0.1198670176584505
+            },
+            {
+              "feature": "gcs_total",
+              "weight": 0.0814232266033618
+            },
+            {
+              "feature": "pain_score",
+              "weight": 0.06679381026861622
+            },
+            {
+              "feature": "spo2",
+              "weight": 0.05776190861215411
+            },
+            {
+              "feature": "respiratory_rate",
+              "weight": 0.05268137743768202
+            },
+            {
+              "feature": "temperature_c",
+              "weight": 0.0507534986092406
+            },
+            {
+              "feature": "shock_index",
+              "weight": 0.03938627238682699
+            },
+            {
+              "feature": "mean_arterial_pressure",
+              "weight": 0.03155969952906583
+            },
+            {
+              "feature": "heart_rate",
+              "weight": 0.029786746493424863
+            },
+            {
+              "feature": "num_prior_ed_visits_12m",
+              "weight": 0.0285746934518941
+            },
+            {
+              "feature": "diastolic_bp",
+              "weight": 0.021749882083273754
+            },
+            {
+              "feature": "mental_status_triage_alert",
+              "weight": 0.02159438285918247
+            },
+            {
+              "feature": "systolic_bp",
+              "weight": 0.021590474400855576
+            },
+            {
+              "feature": "pulse_pressure",
+              "weight": 0.01455150948539858
+            },
+            {
+              "feature": "nlp_obj_advice",
+              "weight": 0.012296323885949485
+            },
+            {
+              "feature": "weight_kg",
+              "weight": 0.010341023906519769
+            },
+            {
+              "feature": "height_cm",
+              "weight": 0.010318415711736003
+            },
+            {
+              "feature": "bmi",
+              "weight": 0.009767585866229552
+            },
+            {
+              "feature": "age",
+              "weight": 0.009337378625139997
+            },
+            {
+              "feature": "mental_status_triage_unresponsive",
+              "weight": 0.008296191621502335
+            }
+          ]
+        },
+        {
+          "pipeline": "pipeline_b",
+          "model_name": "xgboost",
+          "artifact_path": "model_runs/run_06/pipeline_b_xgboost.pkl",
+          "validation_accuracy": 0.8875,
+          "validation_weighted_precision": 0.8881455892993092,
+          "validation_weighted_recall": 0.8875,
+          "validation_weighted_f1": 0.8877884241575912,
+          "test_weighted_f1": null,
+          "top_feature_weights": [
+            {
+              "feature": "news2_score",
+              "weight": 0.16155044734477997
+            },
+            {
+              "feature": "gcs_total",
+              "weight": 0.11884512007236481
+            },
+            {
+              "feature": "pain_score",
+              "weight": 0.058910030871629715
+            },
+            {
+              "feature": "nlp_obj_systemic",
+              "weight": 0.03218269348144531
+            },
+            {
+              "feature": "spo2",
+              "weight": 0.03043794445693493
+            },
+            {
+              "feature": "nlp_obj_new",
+              "weight": 0.028272705152630806
+            },
+            {
+              "feature": "nlp_obj_advice",
+              "weight": 0.025823738425970078
+            },
+            {
+              "feature": "temperature_c",
+              "weight": 0.01892836019396782
+            },
+            {
+              "feature": "num_prior_ed_visits_12m",
+              "weight": 0.01829368621110916
+            },
+            {
+              "feature": "mental_status_triage_alert",
+              "weight": 0.01738823764026165
+            },
+            {
+              "feature": "respiratory_rate_missing",
+              "weight": 0.01730317808687687
+            },
+            {
+              "feature": "nlp_obj_wound",
+              "weight": 0.017119402065873146
+            },
+            {
+              "feature": "nlp_obj_features",
+              "weight": 0.016514666378498077
+            },
+            {
+              "feature": "nlp_obj_query",
+              "weight": 0.016199752688407898
+            },
+            {
+              "feature": "mental_status_triage_unresponsive",
+              "weight": 0.014465504325926304
+            },
+            {
+              "feature": "nlp_obj_stable",
+              "weight": 0.013765626586973667
+            },
+            {
+              "feature": "nlp_obj_suspected",
+              "weight": 0.013345764018595219
+            },
+            {
+              "feature": "respiratory_rate",
+              "weight": 0.012068650685250759
+            },
+            {
+              "feature": "nlp_obj_reaction",
+              "weight": 0.012063478119671345
+            },
+            {
+              "feature": "nlp_obj_pain",
+              "weight": 0.012045246548950672
+            }
+          ]
+        },
+        {
+          "pipeline": "pipeline_a_2_phrase",
+          "model_name": "random_forest",
+          "artifact_path": "model_runs/run_06/pipeline_a_2_phrase_random_forest.pkl",
+          "validation_accuracy": 0.877890625,
+          "validation_weighted_precision": 0.8780272814400019,
+          "validation_weighted_recall": 0.877890625,
+          "validation_weighted_f1": 0.8773470938134781,
+          "test_weighted_f1": null,
+          "top_feature_weights": [
+            {
+              "feature": "news2_score",
+              "weight": 0.1154608858284618
+            },
+            {
+              "feature": "gcs_total",
+              "weight": 0.06929837566554949
+            },
+            {
+              "feature": "pain_score",
+              "weight": 0.06672181644710103
+            },
+            {
+              "feature": "spo2",
+              "weight": 0.05789710038944053
+            },
+            {
+              "feature": "respiratory_rate",
+              "weight": 0.05109614528457922
+            },
+            {
+              "feature": "temperature_c",
+              "weight": 0.05034840986502772
+            },
+            {
+              "feature": "shock_index",
+              "weight": 0.03856356491363844
+            },
+            {
+              "feature": "mean_arterial_pressure",
+              "weight": 0.0347276405260654
+            },
+            {
+              "feature": "heart_rate",
+              "weight": 0.030022628063424022
+            },
+            {
+              "feature": "num_prior_ed_visits_12m",
+              "weight": 0.028641279490993696
+            },
+            {
+              "feature": "nlp_full_mild",
+              "weight": 0.023390649187174595
+            },
+            {
+              "feature": "systolic_bp",
+              "weight": 0.022837267081424622
+            },
+            {
+              "feature": "mental_status_triage_alert",
+              "weight": 0.02159627204929613
+            },
+            {
+              "feature": "diastolic_bp",
+              "weight": 0.020881920863090778
+            },
+            {
+              "feature": "pulse_pressure",
+              "weight": 0.012924089459461137
+            },
+            {
+              "feature": "nlp_full_advice",
+              "weight": 0.011191914559000033
+            },
+            {
+              "feature": "height_cm",
+              "weight": 0.009724430764360473
+            },
+            {
+              "feature": "weight_kg",
+              "weight": 0.00967746040387434
+            },
+            {
+              "feature": "bmi",
+              "weight": 0.009276780690086098
+            },
+            {
+              "feature": "nlp_full_moderate",
+              "weight": 0.008737795112672732
+            }
+          ]
+        },
+        {
+          "pipeline": "pipeline_a_2_phrase",
+          "model_name": "xgboost",
+          "artifact_path": "model_runs/run_06/pipeline_a_2_phrase_xgboost.pkl",
+          "validation_accuracy": 0.89859375,
+          "validation_weighted_precision": 0.8987927911516921,
+          "validation_weighted_recall": 0.89859375,
+          "validation_weighted_f1": 0.8986684312258998,
+          "test_weighted_f1": null,
+          "top_feature_weights": [
+            {
+              "feature": "news2_score",
+              "weight": 0.16297651827335358
+            },
+            {
+              "feature": "gcs_total",
+              "weight": 0.11357796937227249
+            },
+            {
+              "feature": "pain_score",
+              "weight": 0.05814037099480629
+            },
+            {
+              "feature": "nlp_full_mild",
+              "weight": 0.035895250737667084
+            },
+            {
+              "feature": "spo2",
+              "weight": 0.029528187587857246
+            },
+            {
+              "feature": "nlp_full_systemic",
+              "weight": 0.02793755754828453
+            },
+            {
+              "feature": "nlp_full_new",
+              "weight": 0.02771075628697872
+            },
+            {
+              "feature": "nlp_full_advice",
+              "weight": 0.023332471027970314
+            },
+            {
+              "feature": "temperature_c",
+              "weight": 0.01830054260790348
+            },
+            {
+              "feature": "respiratory_rate_missing",
+              "weight": 0.018098700791597366
+            },
+            {
+              "feature": "nlp_full_moderate",
+              "weight": 0.017611131072044373
+            },
+            {
+              "feature": "mental_status_triage_alert",
+              "weight": 0.017237789928913116
+            },
+            {
+              "feature": "num_prior_ed_visits_12m",
+              "weight": 0.01721813529729843
+            },
+            {
+              "feature": "nlp_full_features",
+              "weight": 0.016054561361670494
+            },
+            {
+              "feature": "nlp_full_chest",
+              "weight": 0.01592395082116127
+            },
+            {
+              "feature": "nlp_full_minor",
+              "weight": 0.01407655980437994
+            },
+            {
+              "feature": "nlp_full_query",
+              "weight": 0.01399623230099678
+            },
+            {
+              "feature": "nlp_full_pain",
+              "weight": 0.012843853794038296
+            },
+            {
+              "feature": "mental_status_triage_unresponsive",
+              "weight": 0.012822305783629417
+            },
+            {
+              "feature": "nlp_full_acute",
+              "weight": 0.012724293395876884
+            }
+          ]
+        },
+        {
+          "pipeline": "pipeline_b_2_phrase",
+          "model_name": "random_forest",
+          "artifact_path": "model_runs/run_06/pipeline_b_2_phrase_random_forest.pkl",
+          "validation_accuracy": 0.869296875,
+          "validation_weighted_precision": 0.8698078621138936,
+          "validation_weighted_recall": 0.869296875,
+          "validation_weighted_f1": 0.8689451754991291,
+          "test_weighted_f1": null,
+          "top_feature_weights": [
+            {
+              "feature": "news2_score",
+              "weight": 0.1198670176584505
+            },
+            {
+              "feature": "gcs_total",
+              "weight": 0.0814232266033618
+            },
+            {
+              "feature": "pain_score",
+              "weight": 0.06679381026861622
+            },
+            {
+              "feature": "spo2",
+              "weight": 0.05776190861215411
+            },
+            {
+              "feature": "respiratory_rate",
+              "weight": 0.05268137743768202
+            },
+            {
+              "feature": "temperature_c",
+              "weight": 0.0507534986092406
+            },
+            {
+              "feature": "shock_index",
+              "weight": 0.03938627238682699
+            },
+            {
+              "feature": "mean_arterial_pressure",
+              "weight": 0.03155969952906583
+            },
+            {
+              "feature": "heart_rate",
+              "weight": 0.029786746493424863
+            },
+            {
+              "feature": "num_prior_ed_visits_12m",
+              "weight": 0.0285746934518941
+            },
+            {
+              "feature": "diastolic_bp",
+              "weight": 0.021749882083273754
+            },
+            {
+              "feature": "mental_status_triage_alert",
+              "weight": 0.02159438285918247
+            },
+            {
+              "feature": "systolic_bp",
+              "weight": 0.021590474400855576
+            },
+            {
+              "feature": "pulse_pressure",
+              "weight": 0.01455150948539858
+            },
+            {
+              "feature": "nlp_obj_advice",
+              "weight": 0.012296323885949485
+            },
+            {
+              "feature": "weight_kg",
+              "weight": 0.010341023906519769
+            },
+            {
+              "feature": "height_cm",
+              "weight": 0.010318415711736003
+            },
+            {
+              "feature": "bmi",
+              "weight": 0.009767585866229552
+            },
+            {
+              "feature": "age",
+              "weight": 0.009337378625139997
+            },
+            {
+              "feature": "mental_status_triage_unresponsive",
+              "weight": 0.008296191621502335
+            }
+          ]
+        },
+        {
+          "pipeline": "pipeline_b_2_phrase",
+          "model_name": "xgboost",
+          "artifact_path": "model_runs/run_06/pipeline_b_2_phrase_xgboost.pkl",
+          "validation_accuracy": 0.8875,
+          "validation_weighted_precision": 0.8881455892993092,
+          "validation_weighted_recall": 0.8875,
+          "validation_weighted_f1": 0.8877884241575912,
+          "test_weighted_f1": null,
+          "top_feature_weights": [
+            {
+              "feature": "news2_score",
+              "weight": 0.16155044734477997
+            },
+            {
+              "feature": "gcs_total",
+              "weight": 0.11884512007236481
+            },
+            {
+              "feature": "pain_score",
+              "weight": 0.058910030871629715
+            },
+            {
+              "feature": "nlp_obj_systemic",
+              "weight": 0.03218269348144531
+            },
+            {
+              "feature": "spo2",
+              "weight": 0.03043794445693493
+            },
+            {
+              "feature": "nlp_obj_new",
+              "weight": 0.028272705152630806
+            },
+            {
+              "feature": "nlp_obj_advice",
+              "weight": 0.025823738425970078
+            },
+            {
+              "feature": "temperature_c",
+              "weight": 0.01892836019396782
+            },
+            {
+              "feature": "num_prior_ed_visits_12m",
+              "weight": 0.01829368621110916
+            },
+            {
+              "feature": "mental_status_triage_alert",
+              "weight": 0.01738823764026165
+            },
+            {
+              "feature": "respiratory_rate_missing",
+              "weight": 0.01730317808687687
+            },
+            {
+              "feature": "nlp_obj_wound",
+              "weight": 0.017119402065873146
+            },
+            {
+              "feature": "nlp_obj_features",
+              "weight": 0.016514666378498077
+            },
+            {
+              "feature": "nlp_obj_query",
+              "weight": 0.016199752688407898
+            },
+            {
+              "feature": "mental_status_triage_unresponsive",
+              "weight": 0.014465504325926304
+            },
+            {
+              "feature": "nlp_obj_stable",
+              "weight": 0.013765626586973667
+            },
+            {
+              "feature": "nlp_obj_suspected",
+              "weight": 0.013345764018595219
+            },
+            {
+              "feature": "respiratory_rate",
+              "weight": 0.012068650685250759
+            },
+            {
+              "feature": "nlp_obj_reaction",
+              "weight": 0.012063478119671345
+            },
+            {
+              "feature": "nlp_obj_pain",
+              "weight": 0.012045246548950672
+            }
+          ]
+        }
+      ],
+      "comparison_image_path": "model_runs/run_06/model_comparison_metrics.png",
+      "confusion_matrix_image_path": "model_runs/run_06/best_models_confusion_matrix_grid.png",
+      "best_validation_models_by_pipeline": [
+        {
+          "pipeline": "pipeline_a",
+          "model_name": "XGBoost",
+          "validation_weighted_f1": 0.8986684312258998
+        },
+        {
+          "pipeline": "pipeline_b",
+          "model_name": "XGBoost",
+          "validation_weighted_f1": 0.8877884241575912
+        },
+        {
+          "pipeline": "pipeline_a_2_phrase",
+          "model_name": "XGBoost",
+          "validation_weighted_f1": 0.8986684312258998
+        },
+        {
+          "pipeline": "pipeline_b_2_phrase",
+          "model_name": "XGBoost",
+          "validation_weighted_f1": 0.8877884241575912
+        }
+      ]
+    },
+    {
+      "run_id": "run_07",
+      "created_at_utc": "2026-04-21T05:51:28.892006+00:00",
+      "cv_folds": 3,
+      "models": []
     }
   ]
 }
